@@ -47,6 +47,7 @@ def call_gemini(prompt):
 # Giao diện Streamlit
 st.title("🧠 AI Agent sử dụng Gemini API")
 
+user_log=st.text_area("",height=150)
 user_input = st.text_area("Nhập câu hỏi của bạn:", height=150)
 
 if st.button("Gửi"):
@@ -54,7 +55,6 @@ if st.button("Gửi"):
         st.warning("⚠️ Vui lòng nhập câu hỏi!")
     else:
         with st.spinner("🔄 Đang gửi đến Gemini..."):
-            st.write('helloworld')
             response = call_gemini(user_input)
             st.success("✅ Phản hồi từ Gemini:")
             st.write(response)
