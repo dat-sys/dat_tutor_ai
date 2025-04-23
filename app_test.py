@@ -53,7 +53,7 @@ with col1:
     user_input = st.text_area("Nhập câu hỏi của bạn:", height=150)
 
 with col2:
-    user_output = st.text_area("Log:", height=150)
+    user_output = st.text_area("Giám sát:", height=150)
 
 #################################################################
 
