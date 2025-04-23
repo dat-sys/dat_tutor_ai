@@ -47,8 +47,16 @@ def call_gemini(prompt):
 # Giao diện Streamlit
 st.title("🧠 AI Agent sử dụng Gemini API")
 
-user_log=st.text_area("",height=150)
-user_input = st.text_area("Nhập câu hỏi của bạn:", height=150)
+col1, col2 = st.columns(2)  # Chia layout thành 2 cột
+
+with col1:
+    user_input = st.text_area("Nhập câu hỏi của bạn:", height=150)
+
+with col2:
+    user_output = st.text_area("Log:", min-height=150)
+
+#################################################################
+
 
 if st.button("Gửi"):
     if user_input.strip() == "":
