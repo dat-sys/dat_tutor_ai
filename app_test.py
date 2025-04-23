@@ -54,6 +54,7 @@ if st.button("Gửi"):
         st.warning("⚠️ Vui lòng nhập câu hỏi!")
     else:
         with st.spinner("🔄 Đang gửi đến Gemini..."):
+            print(user_input)
             response = call_gemini(user_input)
             st.success("✅ Phản hồi từ Gemini:")
             st.write(response)
